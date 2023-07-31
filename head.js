@@ -1,7 +1,5 @@
 // FUNCTION IMPLEMENTATION
 const _ = require('lodash');
-// import * as _ from 'lodash';
-// module.exports = {'lodash'};
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅ Assertion Passed:", {actual}, "===", {expected});
