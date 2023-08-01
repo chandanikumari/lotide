@@ -1,9 +1,4 @@
-const eqArrays = function(actual, expected) {
-  if (actual.toString() === expected.toString()) {
-    return true;
-  }
-  return false;
-};
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   const result = eqArrays(actual,expected);
@@ -14,6 +9,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual("Lighthouse Labs", "Bootcamp");
-assertArraysEqual(1, 1);
-assertArraysEqual("Bootcamp", "Bootcap");
+module.exports = assertArraysEqual;
