@@ -16,8 +16,10 @@ const countLetters = function(sentence) {
     }
     
   }
+  console.log(results);
   return results;
 };
 
 assertEqual(countLetters('LHL')['L'], 2);
-//countLetters('chandanikumari');
+
+countLetters('chandanikumari');
