@@ -1,9 +1,12 @@
-const assertEqual = require('../assertEqual');
-const tail = require('../tail');
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const word1 = [1,2,3,4,5,6,7];
-tail(words); // no need to capture the return value since we are not checking it
-tail(word1);
-assertEqual(words.length, 3);
-assertEqual(word1.length, 7);
+describe("#tail", () => {
+  it("returns 2,3,4,5,6,7 for [1,2,3,4,5,6,7]", () => {
+    assert.deepEqual(tail([1,2,3,4,5,6,7]),[2,3,4,5,6,7]);
+  });
+
+  it("returns [Lighthouse, Labs] for [Yo Yo, Lighthouse, Labs]", () => {
+    assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+});

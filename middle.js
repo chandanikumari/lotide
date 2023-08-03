@@ -6,12 +6,12 @@ const middle = function(array) {
     console.log("Empty array");
     return [];
   } else if (array.length % 2 === 0) {
-    console.log("Inside function");
     arr.push(array[((array.length / 2) - 1)]);
     arr.push(array[(array.length / 2)]);
     return arr;
   } else {
-    return array[Math.floor(array.length / 2)];
+    arr.push(array[Math.floor(array.length / 2)]);
+    return arr;
   }
 };
 
