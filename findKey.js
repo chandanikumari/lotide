@@ -20,3 +20,5 @@ let findKeyObj = {
 assertEqual(findKey(findKeyObj, x => x.stars === 2), "noma"); // => "noma"
 assertEqual(findKey(findKeyObj, x => x.stars === 3), "Akaleri"); // => "Akaleri"
 assertEqual(findKey(findKeyObj, x => x.stars === 5, undefined)); // => undefined
+
+module.exports = findKey;

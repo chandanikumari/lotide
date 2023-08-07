@@ -1,18 +1,4 @@
-const eqArrays = function(actual, expected) {
-  if (actual.toString() === expected.toString()) {
-    return true;
-  }
-  return false;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  const result = eqArrays(actual,expected);
-  if (result === true) {
-    console.log("✅✅✅ Assertion Passed:", {actual}, "===", {expected});
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed:", {actual}, "!==", {expected});
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const without = function(source, itemsToRemove) {
   let arr = [];
@@ -31,3 +17,5 @@ assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+
+module.exports = without;
