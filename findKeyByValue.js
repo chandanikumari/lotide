@@ -1,6 +1,4 @@
-const { values } = require("lodash");
 const assertEqual = require("./assertEqual");
-
 
 const findKeyByValue = function(obj, show) {
   for (const ob in obj) {
