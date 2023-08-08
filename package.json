@@ -2,7 +2,7 @@
   "dependencies": {
     "lodash": "^4.17.21"
   },
-  "name": "lotide",
+  "name": "@chandanikumari/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
